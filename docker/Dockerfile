@@ -31,7 +31,7 @@ RUN groupadd -g $ARGOCD_USER_ID argocd && \
 # Binary versions
 # https://github.com/helm/helm/releases
 # Supported Kubernetes Versions 1.35.x - 1.32.x (https://helm.sh/docs/topics/version_skew/)
-ARG HELM_VERSION="v4.2.0"
+ARG HELM_VERSION="v4.2.3"
 # https://github.com/helmfile/helmfile/releases
 ARG HELMFILE_VERSION="1.5.2"
 
@@ -47,7 +47,7 @@ ARG YQ_VERSION="v4.53.2"
 
 # https://github.com/kubernetes/kubectl/tags
 # Compatible with Kubernetes versions ±1 from its version.
-ARG KUBECTL_VERSION="v1.34.8"
+ARG KUBECTL_VERSION="v1.35.8"
 # https://github.com/kubernetes-sigs/krew/releases/
 ARG KREW_VERSION="v0.5.0"
 # https://github.com/bitnami-labs/sealed-secrets/releases
