@@ -258,7 +258,7 @@ else
   helmfile="$(which helmfile)"
 fi
 
-echoerr "helm version $(${helm} version --short --client)"
+echoerr "helm version $(${helm} version --short)"
 echoerr "$(${helmfile} --version)"
 
 helmfile="${helmfile} --helm-binary ${helm} --no-color --allow-no-matching-release"
@@ -281,7 +281,7 @@ fi
 # TODO: parse helmfile here to detect the operative -f or --file
 
 # these should work for both v2 and v3
-helm_full_version=$(${helm} version --short --client | cut -d " " -f2)
+helm_full_version=$(${helm} version --short | cut -d " " -f2)
 helm_major_version=$(echo "${helm_full_version%+*}" | cut -d "." -f1 | sed 's/[^0-9]//g')
 helm_minor_version=$(echo "${helm_full_version%+*}" | cut -d "." -f2 | sed 's/[^0-9]//g')
 helm_patch_version=$(echo "${helm_full_version%+*}" | cut -d "." -f3 | sed 's/[^0-9]//g')
